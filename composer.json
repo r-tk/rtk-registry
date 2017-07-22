@@ -1,0 +1,16 @@
+{
+	"name": "raul72/RFRegistry",
+	"description": "RF Registry",
+	"type": "library",
+	"authors": [
+		{
+			"name": "Raul Raat",
+			"role": "Developer"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"RF\\": "src"
+		}	
+	}
+}
