@@ -2,6 +2,7 @@
 	"name": "raul72/rf-registry",
 	"description": "RF Registry",
 	"type": "library",
+	"license": "MIT",
 	"authors": [
 		{
 			"name": "Raul Raat",
