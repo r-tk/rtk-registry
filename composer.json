@@ -9,6 +9,9 @@
 			"role": "Developer"
 		}
 	],
+	"require-dev": {
+		"phpunit/phpunit": "~6"
+	},
 	"autoload": {
 		"psr-4": {
 			"RF\\Registry\\": "src"
