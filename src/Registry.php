@@ -35,13 +35,13 @@ class Registry {
 	}
 
 	/**
-	 * Check if a value is set for this key in the registry
+	 * Check if a item has been added to the registry
 	 *
 	 * @static
 	 * @param $key mixed
 	 * @return bool
 	 */
-	public static function check($key) {
+	public static function has($key) {
 		return isset(self::$registry[$key]);
 	}
 

@@ -39,7 +39,7 @@ class RegistryTest extends TestCase {
 		Registry::set($key, $value);
 
 		$this->assertTrue(
-			Registry::check($key)
+			Registry::has($key)
 		);
 
 		$this->assertEquals(
@@ -50,37 +50,37 @@ class RegistryTest extends TestCase {
 	}
 
 	/**
-	 * @covers RTK\Registry\Registry::check()
+	 * @covers RTK\Registry\Registry::has()
 	 */
-	public function testCheck() {
+	public function testHas() {
 
-		$key = 'check-test-key';
-		$value = 'check-test-value';
+		$key = 'has-test-key';
+		$value = 'has-test-value';
 
 		$this->assertFalse(
-			Registry::check($key)
+			Registry::has($key)
 		);
 
 		Registry::set($key, $value);
 
 		$this->assertTrue(
-			Registry::check($key)
+			Registry::has($key)
 		);
 
 	}
 
 	/**
-	 * @covers RTK\Registry\Registry::check()
+	 * @covers RTK\Registry\Registry::has()
 	 */
-	public function testCheckValueFalse() {
+	public function testHasValueFalse() {
 
-		$key = 'check-test-key';
+		$key = 'has-test-key';
 		$value = false;
 
 		Registry::set($key, $value);
 
 		$this->assertTrue(
-			Registry::check($key)
+			Registry::has($key)
 		);
 
 	}
