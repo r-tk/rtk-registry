@@ -1,6 +1,6 @@
 {
-	"name": "raul72/rf-registry",
-	"description": "RF Registry",
+	"name": "raul72/rtk-registry",
+	"description": "RTK Registry",
 	"type": "library",
 	"license": "MIT",
 	"authors": [
@@ -14,7 +14,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"RF\\Registry\\": "src"
+			"RTK\\Registry\\": "src"
 		}	
 	}
 }

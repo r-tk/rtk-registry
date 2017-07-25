@@ -1,5 +1,5 @@
 <?php
-namespace RF\Registry;
+namespace RTK\Registry;
 
 class Registry {
 

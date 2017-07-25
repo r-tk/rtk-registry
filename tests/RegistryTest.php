@@ -1,12 +1,12 @@
 <?php
-namespace  RF\Registry;
+namespace  RTK\Registry;
 
 use PHPUnit\Framework\TestCase;
 
 class RegistryTest extends TestCase {
 
 	/**
-	 * @covers RF\Registry\Registry::get()
+	 * @covers RTK\Registry\Registry::get()
 	 */
 	public function testNonExistValue() {
 
@@ -16,7 +16,7 @@ class RegistryTest extends TestCase {
 	}
 
 	/**
-	 * @covers RF\Registry\Registry::get()
+	 * @covers RTK\Registry\Registry::get()
 	 */
 	public function testUserDefinedNonExistValue() {
 
@@ -28,8 +28,8 @@ class RegistryTest extends TestCase {
 	}
 
 	/**
-	 * @covers RF\Registry\Registry::set()
-	 * @covers RF\Registry\Registry::get()
+	 * @covers RTK\Registry\Registry::set()
+	 * @covers RTK\Registry\Registry::get()
 	 */
 	public function testRandomStringKeyValue() {
 
@@ -50,7 +50,7 @@ class RegistryTest extends TestCase {
 	}
 
 	/**
-	 * @covers RF\Registry\Registry::check()
+	 * @covers RTK\Registry\Registry::check()
 	 */
 	public function testCheck() {
 
@@ -70,7 +70,7 @@ class RegistryTest extends TestCase {
 	}
 
 	/**
-	 * @covers RF\Registry\Registry::check()
+	 * @covers RTK\Registry\Registry::check()
 	 */
 	public function testCheckValueFalse() {
 
@@ -86,7 +86,7 @@ class RegistryTest extends TestCase {
 	}
 
 	/**
-	 * @covers RF\Registry\Registry::remove()
+	 * @covers RTK\Registry\Registry::remove()
 	 */
 	public function testRemove() {
 
