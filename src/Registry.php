@@ -28,7 +28,7 @@ class Registry {
 	 * @return mixed
 	 */
 	public static function get($key, $default_value = null) {
-		if (!self::check($key)) {
+		if (!self::has($key)) {
 			return $default_value;
 		}
 		return self::$registry[$key];
