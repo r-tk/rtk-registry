@@ -107,4 +107,65 @@ class RegistryTest extends TestCase {
 
 	}
 
+	/**
+	 */
+	public function testCasInsesnitve() {
+
+		$key = 'Case-Insensitve-Test-Key';
+		$value = 'case-insensitve-test-value';
+
+		Registry::set($key, $value);
+
+		$this->assertTrue(
+			Registry::has($key),
+			$value
+		);
+		$this->assertTrue(
+			Registry::has(strtoupper($key)),
+			$value
+		);
+		$this->assertTrue(
+			Registry::has(strtolower($key)),
+			$value
+		);
+
+		$this->assertEquals(
+			Registry::get($key),
+			$value
+		);
+		$this->assertEquals(
+			Registry::get(strtoupper($key)),
+			$value
+		);
+		$this->assertEquals(
+			Registry::get(strtolower($key)),
+			$value
+		);
+
+	}
+
+	/**
+	 */
+	public function testCasInsesnitveOverwrite() {
+
+		$key = 'Case-Insensitve-Test-Key';
+		$initial_value = 'case-insensitve-overwrite-value-1';
+		$overwrite_value = 'case-insensitve-overwrite-value-2';
+
+		Registry::set($key, $initial_value);
+
+		$this->assertEquals(
+			Registry::get($key),
+			$initial_value
+		);
+
+		Registry::set($key, $overwrite_value);
+
+		$this->assertEquals(
+			Registry::get($key),
+			$overwrite_value
+		);
+
+	}
+
 }

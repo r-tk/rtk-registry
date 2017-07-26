@@ -16,6 +16,7 @@ class Registry {
 	 * @param $value mixed
 	 */
 	public static function set($key, $value) {
+		$key = strtolower($key);
 		self::$registry[$key] = $value;
 	}
 
@@ -28,6 +29,7 @@ class Registry {
 	 * @return mixed
 	 */
 	public static function get($key, $default_value = null) {
+		$key = strtolower($key);
 		if (!self::has($key)) {
 			return $default_value;
 		}
@@ -42,6 +44,7 @@ class Registry {
 	 * @return bool
 	 */
 	public static function has($key) {
+		$key = strtolower($key);
 		return isset(self::$registry[$key]);
 	}
 
