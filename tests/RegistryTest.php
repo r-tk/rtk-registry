@@ -169,6 +169,3 @@ class RegistryTest extends TestCase {
 	}
 
 }
-
-
-
