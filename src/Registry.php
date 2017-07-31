@@ -18,6 +18,7 @@ class Registry {
 	public static function set($key, $value) {
 		$key = strtolower($key);
 		self::$registry[$key] = $value;
+
 	}
 
 	/**
@@ -34,6 +35,7 @@ class Registry {
 			return $default_value;
 		}
 		return self::$registry[$key];
+
 	}
 
 	/**
@@ -46,6 +48,7 @@ class Registry {
 	public static function has($key) {
 		$key = strtolower($key);
 		return isset(self::$registry[$key]);
+
 	}
 
 	/**
@@ -56,6 +59,7 @@ class Registry {
 	 */
 	public static function remove($key) {
 		unset(self::$registry[$key]);
+
 	}
 
 }

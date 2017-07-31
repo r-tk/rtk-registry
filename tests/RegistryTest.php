@@ -11,7 +11,7 @@ class RegistryTest extends TestCase {
 	public function testNonExistValue() {
 
 		$result = Registry::get('some-undefined-key');
-		$this->assertNull($result); 
+		$this->assertNull($result);
 
 	}
 
@@ -23,7 +23,7 @@ class RegistryTest extends TestCase {
 		$default_value = 'this-is-a-custom-value';
 		$result = Registry::get('some-undefined-key', $default_value);
 
-		$this->assertEquals($result, $default_value); 
+		$this->assertEquals($result, $default_value);
 
 	}
 
