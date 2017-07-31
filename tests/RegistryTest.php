@@ -109,10 +109,10 @@ class RegistryTest extends TestCase {
 
 	/**
 	 */
-	public function testCasInsesnitve() {
+	public function testCaseInsensitive() {
 
-		$key = 'Case-Insensitve-Test-Key';
-		$value = 'case-insensitve-test-value';
+		$key = 'Case-Insensitive-Test-Key';
+		$value = 'case-insensitive-test-value';
 
 		Registry::set($key, $value);
 
@@ -146,11 +146,11 @@ class RegistryTest extends TestCase {
 
 	/**
 	 */
-	public function testCasInsesnitveOverwrite() {
+	public function testCaseInsensitiveOverwrite() {
 
-		$key = 'Case-Insensitve-Test-Key';
-		$initial_value = 'case-insensitve-overwrite-value-1';
-		$overwrite_value = 'case-insensitve-overwrite-value-2';
+		$key = 'Case-Insensitive-Test-Key';
+		$initial_value = 'case-insensitive-overwrite-value-1';
+		$overwrite_value = 'case-insensitive-overwrite-value-2';
 
 		Registry::set($key, $initial_value);
 
