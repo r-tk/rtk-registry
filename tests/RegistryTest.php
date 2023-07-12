@@ -9,22 +9,18 @@ class RegistryTest extends TestCase {
 	 * @covers RTK\Registry\Registry::get()
 	 */
 	public function testNonExistValue() {
-
 		$result = Registry::get('some-undefined-key');
 		$this->assertNull($result);
-
 	}
 
 	/**
 	 * @covers RTK\Registry\Registry::get()
 	 */
 	public function testUserDefinedNonExistValue() {
-
 		$default_value = 'this-is-a-custom-value';
 		$result = Registry::get('some-undefined-key', $default_value);
 
 		$this->assertEquals($result, $default_value);
-
 	}
 
 	/**
@@ -32,7 +28,6 @@ class RegistryTest extends TestCase {
 	 * @covers RTK\Registry\Registry::get()
 	 */
 	public function testRandomStringKeyValue() {
-
 		$key = 'testRandomStringKeyValue value ' . mt_rand();
 		$value = 'testRandomStringKeyValue key ' . mt_rand();
 
@@ -46,14 +41,12 @@ class RegistryTest extends TestCase {
 			$value,
 			Registry::get($key)
 		);
-
 	}
 
 	/**
 	 * @covers RTK\Registry\Registry::has()
 	 */
 	public function testHas() {
-
 		$key = 'has-test-key';
 		$value = 'has-test-value';
 
@@ -66,14 +59,12 @@ class RegistryTest extends TestCase {
 		$this->assertTrue(
 			Registry::has($key)
 		);
-
 	}
 
 	/**
 	 * @covers RTK\Registry\Registry::has()
 	 */
 	public function testHasValueFalse() {
-
 		$key = 'has-test-key';
 		$value = false;
 
@@ -82,14 +73,12 @@ class RegistryTest extends TestCase {
 		$this->assertTrue(
 			Registry::has($key)
 		);
-
 	}
 
 	/**
 	 * @covers RTK\Registry\Registry::remove()
 	 */
 	public function testRemove() {
-
 		$key = 'remove-test-key';
 		$value = 'remove-test-value';
 
@@ -104,13 +93,11 @@ class RegistryTest extends TestCase {
 		$this->assertNull(
 			Registry::get($key)
 		);
-
 	}
 
 	/**
 	 */
 	public function testCaseInsensitive() {
-
 		$key = 'Case-Insensitive-Test-Key';
 		$value = 'case-insensitive-test-value';
 
@@ -141,13 +128,11 @@ class RegistryTest extends TestCase {
 			Registry::get(strtolower($key)),
 			$value
 		);
-
 	}
 
 	/**
 	 */
 	public function testCaseInsensitiveOverwrite() {
-
 		$key = 'Case-Insensitive-Test-Key';
 		$initial_value = 'case-insensitive-overwrite-value-1';
 		$overwrite_value = 'case-insensitive-overwrite-value-2';
@@ -165,7 +150,5 @@ class RegistryTest extends TestCase {
 			Registry::get($key),
 			$overwrite_value
 		);
-
 	}
-
 }
