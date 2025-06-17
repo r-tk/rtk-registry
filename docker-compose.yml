@@ -15,3 +15,11 @@ services:
       - .:/app
     profiles:
       - utils
+  phpcs:
+    build:
+      context: .
+      target: phpcs
+    volumes:
+      - .:/app
+    profiles:
+      - utils

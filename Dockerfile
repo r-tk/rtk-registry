@@ -23,3 +23,10 @@ RUN apk add --no-cache $PHPIZE_DEPS \
 
 ENTRYPOINT [  "php", "vendor/bin/phpunit" ]
 CMD [ "--coverage-text", "--coverage-clover=./build/logs/clover.xml" ]
+
+FROM base AS phpcs
+
+WORKDIR /app
+
+ENTRYPOINT [  "php", "vendor/bin/phpcs" ]
+

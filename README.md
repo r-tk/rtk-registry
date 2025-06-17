@@ -18,3 +18,9 @@ docker compose run --rm composer
 ```
 docker compose run --rm test
 ```
+
+## phpcs
+
+```
+docker compose run --rm phpcs
+```
