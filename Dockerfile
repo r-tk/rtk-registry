@@ -10,7 +10,7 @@ COPY --from=composer:lts /usr/bin/composer /usr/bin/composer
 
 ENTRYPOINT [ "composer" ]
 
-CMD [ "install", "--no-interaction", "--prefer-source" ]
+CMD [ "install", "--no-interaction", "--prefer-dist" ]
 
 FROM base AS test
 
