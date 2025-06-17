@@ -1,0 +1,9 @@
+services:
+  composer:
+    build:
+      context: .
+      target: composer
+    volumes:
+      - .:/app
+    profiles:
+      - utils
