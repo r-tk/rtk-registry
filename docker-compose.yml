@@ -7,3 +7,11 @@ services:
       - .:/app
     profiles:
       - utils
+  test:
+    build:
+      context: .
+      target: test
+    volumes:
+      - .:/app
+    profiles:
+      - utils
