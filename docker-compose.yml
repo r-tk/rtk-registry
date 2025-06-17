@@ -1,0 +1,25 @@
+services:
+  composer:
+    build:
+      context: .
+      target: composer
+    volumes:
+      - .:/app
+    profiles:
+      - utils
+  test:
+    build:
+      context: .
+      target: test
+    volumes:
+      - .:/app
+    profiles:
+      - utils
+  phpcs:
+    build:
+      context: .
+      target: phpcs
+    volumes:
+      - .:/app
+    profiles:
+      - utils
