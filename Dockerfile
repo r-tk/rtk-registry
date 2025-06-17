@@ -1,6 +1,6 @@
 ARG PHP_VERSION=5.6
 
-FROM php:${PHP_VERSION}-cli as base
+FROM php:${PHP_VERSION}-cli-alpine as base
 
 WORKDIR /app
 
